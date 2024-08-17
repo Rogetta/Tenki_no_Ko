@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DASH Streaming</title>
+    <script src="https://cdn.jsdelivr.net/npm/shaka-player@3.0.1/dist/shaka-player.compiled.js"></script>
+</head>
+<body>
+    <video id="video" controls autoplay></video>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('video');
+            const player = new shaka.Player(video);
+
+            // Listen for errors
+            player.addEventListener('error', onErrorEvent);
+
+            // Initialize the Player
+            player.load('https://github.com/Rogetta/Tenki_no_Ko/blob/main/resources/manifest.mpd').then(function() {
+                console.log('The video has now been loaded!');
+            }).catch(onError);
+
+            function onErrorEvent(event) {
+                console.error('Error code', event.detail.code, 'object', event.detail);
+            }
+
+            function onError(error) {
+                console.error('Error code', error.code, 'object', error);
+            }
+        });
+    </script>
+</body>
+</html>
