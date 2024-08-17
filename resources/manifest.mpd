@@ -15,7 +15,7 @@
     <Period id="0" start="PT0.0S">
         <AdaptationSet id="0" contentType="video" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true" frameRate="24000/1001" maxWidth="1920" maxHeight="1080" par="16:9">
             <Representation id="0" mimeType="video/mp4" codecs="hev1" bandwidth="4214783" width="1920" height="1080" sar="1:1">
-                <SegmentTemplate timescale="24000" initialization="https://github.com/Rogetta/Tenki_no_Ko/raw/main/resources/init-stream$RepresentationID$.m4s" media="https://github.com/Rogetta/Tenki_no_Ko/raw/main/resources/chunk-stream$RepresentationID$-$Number%05d$.m4s" startNumber="1">
+                <SegmentTemplate timescale="24000" initialization="https://raw.githubusercontent.com/Rogetta/Tenki_no_Ko/main/resources/init-stream$RepresentationID$.m4s" media="https://raw.githubusercontent.com/Rogetta/Tenki_no_Ko/main/resources/chunk-stream$RepresentationID$-$Number%05d$.m4s" startNumber="1">
                     <SegmentTimeline>
                         <S t="0" d="248248" r="650" />
                     </SegmentTimeline>
@@ -25,7 +25,7 @@
         <AdaptationSet id="1" contentType="audio" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true">
             <Representation id="1" mimeType="audio/mp4" codecs="flac" bandwidth="128000" audioSamplingRate="48000">
                 <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
-                <SegmentTemplate timescale="48000" initialization="https://github.com/Rogetta/Tenki_no_Ko/raw/main/resources/init-stream$RepresentationID$.m4s" media="https://github.com/Rogetta/Tenki_no_Ko/raw/main/resources/chunk-stream$RepresentationID$-$Number%05d$.m4s" startNumber="1">
+                <SegmentTemplate timescale="48000" initialization="https://raw.githubusercontent.com/Rogetta/Tenki_no_Ko/main/resources/init-stream$RepresentationID$.m4s" media="https://raw.githubusercontent.com/Rogetta/Tenki_no_Ko/main/resources/chunk-stream$RepresentationID$-$Number%05d$.m4s" startNumber="1">
                     <SegmentTimeline>
                         <S t="0" d="244224" r="1322" />
                         <S d="111276" />
