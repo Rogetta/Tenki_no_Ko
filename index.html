@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DPlayer Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+</head>
+<body>
+    <div id="dplayer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+    <script>
+        const dp = new DPlayer({
+            container: document.getElementById('dplayer'),
+            video: {
+                url: 'https://github.com/Rogetta/Tenki_no_Ko/raw/main/resources/manifest.mpd', // 替换为实际的 MPD 文件 URL
+                type: 'dash'
+            }
+        });
+    </script>
+</body>
+</html>
