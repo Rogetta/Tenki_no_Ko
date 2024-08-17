@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Shaka Player Example</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.0/shaka-player.compiled.js"></script>
+    <title>DPlayer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
 </head>
 <body>
-    <video id="videoPlayer" controls></video>
+    <div id="dplayer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
     <script>
-        // 创建 Shaka 播放器实例
-        var player = new shaka.Player(document.getElementById('videoPlayer'));
-        
-        // 设置 MPD 文件 URL
-        var manifestUri = 'https://raw.githubusercontent.com/Rogetta/Tenki_no_Ko/main/resources/manifest.mpd'; // 你的 MPD 文件 URL
-        
-        // 加载视频
-        player.load(manifestUri).then(function() {
-            console.log('The video has been loaded successfully!');
-        }).catch(function(error) {
-            console.error('Error loading video', error);
+        const dp = new DPlayer({
+            container: document.getElementById('dplayer'),
+            video: {
+                url: 'https://github.com/Rogetta/Tenki_no_Ko/raw/main/resources/manifest.mpd', // 替换为实际的 MPD 文件 URL
+                type: 'dash'
+            }
         });
     </script>
 </body>
